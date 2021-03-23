@@ -1,1 +1,83 @@
-<p>crear-vacante works!</p>
+<form class="form-horizontal" style="margin-top: auto;">
+    <a class="navbar-brand" href="#">
+        <img class="img-fluid" src="assets\Iconos\ITC.png" alt="logo" />
+    </a>
+        <section class="container my-5 position-relative ">
+          <h1>Vacante</h1>
+          <section class="form-group">
+            <label for="exampleFormControlInput1 ">Fecha Solicitud</label>
+            <input
+              type="date"
+              class="form-control"
+              id="v_fecha"
+            />
+          </section>
+          <section class="form-group">
+            <label for="exampleFormControlInput1" class="col-lg-1">Solicitante</label>
+            <input
+              type="text"
+              class="form-control"
+              id="v_solicitante"
+              placeholder="Juan Perez"
+            />
+          </section>
+          <section class="form-group">
+            <label for="exampleFormControlInput1"  class="col-lg-1">Cargo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="v_cargo"
+              placeholder="Gerente de proyecto"
+            />
+          </section>
+          <section class="form-group">
+            <label for="exampleFormControlInput1"  class="col-lg-1">Estado</label>
+            <section class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="v_estado1">
+                <label class="form-check-label col-lg-2"  for="defaultCheck2">
+                  Abierto
+                </label>
+              <input class="form-check-input" type="checkbox" value="" id="v_estado2">
+              <label class="form-check-label col-lg-2" for="defaultCheck2">
+                Cerrado
+              </label>
+             </section>
+          </section>
+          <section class="form-group">
+            <label for="exampleFormControlInput1" class="col-lg-1">Cantidad</label>
+            <input
+              type="number"
+              class="form-control"
+              id="v_cantidad"
+              placeholder="1"
+            />
+          </section>
+          <section class="form-group">
+            <label for="exampleFormControlInput1" class="col-lg-1">Teléfono</label>
+            <input
+              type="number"
+              class="form-control"
+              id="v_telefono"
+              placeholder="321235385"
+            />
+          </section>
+         
+          <section class="form-group">
+            <label for="exampleFormControlTextarea1" class="col-lg-1">Observación</label>
+            <textarea
+              class="form-control"
+              id="v_observa"
+              rows="3"
+            ></textarea>
+          </section>
+        <section  class="btn-toolbar" role="toolbar">
+          <section class="btn-group col-lg-1">
+              <button type="submit" class="btn btn-primary" id="b_vguardar">Guardar</button>
+          </section>
+          <section class="btn-group  col-lg-1">
+             <button type="reset" class="btn btn-primary" id="b_cancelar">Cancelar</button>
+          </section>
+        </section>
+        </section>
+      </form>
+    
