@@ -31,5 +31,5 @@ Una lista de tecnologías utilizadas dentro del proyecto:
 ```  
 ## Colaboración
 * Jeniffer Lorena Aristizabal Angel
-* LEONARDO JOSE GOMEZ DIAZ PRUEBA
+* LEONARDO JOSE GOMEZ DIAZ
 * Esteban Fabian Patiño Montealegre

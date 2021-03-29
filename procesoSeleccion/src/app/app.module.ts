@@ -11,6 +11,8 @@ import { CrearVacanteComponent } from './componentes/crear-vacante/crear-vacante
 import { CrearCandidatoComponent } from './componentes/crear-candidato/crear-candidato.component';
 import { Entrevista1Component } from './componentes/entrevista1/entrevista1.component';
 import { PrincipalComponent } from './paginas/principal/principal.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { PrincipalComponent } from './paginas/principal/principal.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
