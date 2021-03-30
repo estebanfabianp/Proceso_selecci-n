@@ -25,7 +25,7 @@ export class IngresoComponent implements OnInit {
       this.ingresar.ingresarUsuario(this.usuario).subscribe(
         (respuesta) => {
           alert('Bienvenido');
-          this.router.navigateByUrl('/usuario');
+          this.router.navigateByUrl('/principal');
         },
         (err) => {
           alert(err.error.error.message);

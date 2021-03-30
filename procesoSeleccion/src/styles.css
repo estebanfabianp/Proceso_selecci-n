@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+.fuente_titulo {
+  font-family: "Khand", sans-serif;
+}
+.fuente {
+  font-family: "Roboto Slab", serif;
+  font-size: 120.5%;
+  line-height: 1.7;
+}
+.btn-ingreso {
+  color: #fff !important;
+  background-color: #4f96ce !important;
+  border-color: #17a2b8 !important;
+  display: block;
+  width: 100%;
+}
+.btn-primary {
+  color: #fff !important;
+  background-color: #4f96ce !important;
+  border-color: #17a2b8 !important;
+  display: block;
+  width: 100%;
+}
+.btn-primary:hover {
+    background-color: #4f97ceda !important;
+    border-color: #17a3b8d5 !important;
+}
+/* button:focus{
+    outline:none !important;
+    } */
+/* input[type="button"] {
+    width: 120px;
+    height: 60px;
+    margin-left: 35px;
+    display: block;
+    background-color: gray!important;
+    color: white;
+    border: none;
+    outline: none;
+} */
