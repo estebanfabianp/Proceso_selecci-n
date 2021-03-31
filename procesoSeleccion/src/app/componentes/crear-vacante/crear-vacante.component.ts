@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { VacanteModule } from '../../modelos/vacante.model';
+import { CrearVacanteService } from '../../servicios/crear-vacante.service';
 
 @Component({
   selector: 'app-crear-vacante',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearVacanteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private crear: CrearVacanteService, private router: Router) { }
+
+  vacante: VacanteModule = new VacanteModule();
 
   ngOnInit(): void {
   }
 
+  crearVacante(form: NgForm){
+    if (form.invalid) {
+      return;
+    } else {
+      console.log(form);
+      console.log(this.vacante);
+      this.crear.createVacantes(this.vacante).subscribe(
+        (res) => {
+          alert('Registro exitoso');
+        },
+        (err) => {
+          alert(err.error.error.message);
+        }
+      );
+    }
+  }
 }
