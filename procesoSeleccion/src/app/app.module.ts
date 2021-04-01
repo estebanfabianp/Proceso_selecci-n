@@ -13,6 +13,8 @@ import { Entrevista1Component } from './componentes/entrevista1/entrevista1.comp
 import { PrincipalComponent } from './paginas/principal/principal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MostrarVacantesComponent } from './componentes/mostrar-vacantes/mostrar-vacantes.component';
+import { MostrarCantidatosComponent } from './componentes/mostrar-cantidatos/mostrar-cantidatos.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     CrearVacanteComponent,
     CrearCandidatoComponent,
     Entrevista1Component,
-    PrincipalComponent
+    PrincipalComponent,
+    MostrarVacantesComponent,
+    MostrarCantidatosComponent
   ],
   imports: [
     BrowserModule,

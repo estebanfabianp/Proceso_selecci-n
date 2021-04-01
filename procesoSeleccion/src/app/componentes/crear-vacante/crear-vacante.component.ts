@@ -24,9 +24,10 @@ export class CrearVacanteComponent implements OnInit {
     } else {
       console.log(form);
       console.log(this.vacante);
-      this.crear.createVacantes(this.vacante).subscribe(
+      this.crear.crearVacantes(this.vacante).subscribe(
         (res) => {
           alert('Registro exitoso');
+          this.router.navigateByUrl('/mostrarVacantes');
         },
         (err) => {
           alert(err.error.error.message);

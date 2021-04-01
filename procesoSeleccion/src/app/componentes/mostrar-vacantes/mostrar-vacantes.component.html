@@ -1,0 +1,39 @@
+<div class="text-center">
+    <section id="top" class="one facyt">
+        <div class="container">
+            <header>
+                <h2>Vacantes</h2>
+            </header>
+        </div>
+    </section>
+    <div>
+        <table id="dataTable" class="table table-bordered table-stripped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Vacante</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor= "let vacante of vacantes; let i = index" [class.selecVacantes]="vacante === selecVacantes"
+                (click)="onSelect(vacante)">
+                    <th scope="row">{{ i + 1}}</th>
+                    <td>{{vacante.cargo_solicitado}}</td>
+                    <td>{{vacante.fecha_solicitud}}</td>
+                    <td>{{vacante.estado_solicitud}}</td>
+                    <td>
+                        <button class="btn btn-info" [routerLink]="['/candidato', vacante.id_vancate]">
+                            <i class="fas fa-cloud">Agregar</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <app-mostrar-cantidatos [canditado]="selecVacantes"></app-mostrar-cantidatos>
+    </div>
+</div>
