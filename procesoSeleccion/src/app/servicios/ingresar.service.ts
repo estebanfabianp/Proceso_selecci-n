@@ -8,7 +8,7 @@ import { IngresarModule } from '../modelos/ingresar.model';
 })
 export class IngresarService {
 
-  private apiKey = 'AIzaSyBGmbIw4wauDCufvWCMzkNZbVO2kG01Szw';
+  private apiKey = 'AIzaSyCNMakGUPkAjD4PO_oVMV6KZH6wexsmrvs';
   private usuarioToken: string = "";
 
   constructor(private http: HttpClient) { }
