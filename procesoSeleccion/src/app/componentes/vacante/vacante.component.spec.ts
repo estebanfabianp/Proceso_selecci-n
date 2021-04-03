@@ -8,9 +8,8 @@ describe('VacanteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VacanteComponent ]
-    })
-    .compileComponents();
+      declarations: [VacanteComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

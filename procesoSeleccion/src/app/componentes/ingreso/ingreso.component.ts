@@ -4,21 +4,18 @@ import { Router } from '@angular/router';
 import { IngresarModule } from '../../modelos/ingresar.model';
 import { IngresarService } from '../../servicios/ingresar.service';
 
-
 @Component({
   selector: 'app-ingreso',
   templateUrl: './ingreso.component.html',
-  styleUrls: ['./ingreso.component.css']
+  styleUrls: ['./ingreso.component.css'],
 })
 export class IngresoComponent implements OnInit {
-
   usuario: IngresarModule = new IngresarModule();
   constructor(private ingresar: IngresarService, private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  enviarInformacion(formulario: NgForm){
+  enviarInformacion(formulario: NgForm) {
     if (formulario.invalid) {
       return;
     } else {

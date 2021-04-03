@@ -4,15 +4,12 @@ import { VacanteModule } from '../../modelos/vacante.model';
 @Component({
   selector: 'app-mostrar-cantidatos',
   templateUrl: './mostrar-cantidatos.component.html',
-  styleUrls: ['./mostrar-cantidatos.component.css']
+  styleUrls: ['./mostrar-cantidatos.component.css'],
 })
 export class MostrarCantidatosComponent implements OnInit {
-
   @Input() canditado?: VacanteModule;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

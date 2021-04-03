@@ -8,9 +8,8 @@ describe('MostrarCantidatosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MostrarCantidatosComponent ]
-    })
-    .compileComponents();
+      declarations: [MostrarCantidatosComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

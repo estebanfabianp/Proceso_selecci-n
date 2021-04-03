@@ -6,26 +6,25 @@ import { MostrarVacantesService } from '../../servicios/mostrar-vacantes.service
 @Component({
   selector: 'app-mostrar-vacantes',
   templateUrl: './mostrar-vacantes.component.html',
-  styleUrls: ['./mostrar-vacantes.component.css']
+  styleUrls: ['./mostrar-vacantes.component.css'],
 })
 export class MostrarVacantesComponent implements OnInit {
-
-  constructor(private mostrar: MostrarVacantesService, private router: Router) {}
+  constructor(
+    private mostrar: MostrarVacantesService,
+    private router: Router
+  ) {}
 
   vacantes: VacanteModule[] = [];
 
   selecVacantes = new VacanteModule();
 
   ngOnInit() {
-    this.mostrar.mostrarVacantes()
-    .subscribe(resp => {
+    this.mostrar.mostrarVacantes().subscribe((resp) => {
       this.vacantes = resp;
     });
   }
 
-  onSelect(vacantes: VacanteModule){
+  onSelect(vacantes: VacanteModule) {
     this.selecVacantes = vacantes;
   }
-
-
 }

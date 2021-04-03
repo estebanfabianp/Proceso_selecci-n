@@ -7,18 +7,16 @@ import { CrearVacanteService } from '../../servicios/crear-vacante.service';
 @Component({
   selector: 'app-crear-vacante',
   templateUrl: './crear-vacante.component.html',
-  styleUrls: ['./crear-vacante.component.css']
+  styleUrls: ['./crear-vacante.component.css'],
 })
 export class CrearVacanteComponent implements OnInit {
-
-  constructor(private crear: CrearVacanteService, private router: Router) { }
+  constructor(private crear: CrearVacanteService, private router: Router) {}
 
   vacante: VacanteModule = new VacanteModule();
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  crearVacante(form: NgForm){
+  crearVacante(form: NgForm) {
     if (form.invalid) {
       return;
     } else {
