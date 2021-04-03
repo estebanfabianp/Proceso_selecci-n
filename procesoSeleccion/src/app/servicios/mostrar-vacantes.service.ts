@@ -9,7 +9,7 @@ export class MostrarVacantesService {
 
   constructor(private http: HttpClient){ }
 
-  private url = 'https://libros-demo-default-rtdb.firebaseio.com';
+  private url = 'https://procesoseleccion-724a7-default-rtdb.firebaseio.com';
 
   mostrarVacantes(){
     return this.http.get(`${this.url}/vacante.json`)
