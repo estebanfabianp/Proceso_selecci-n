@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { VacanteModule } from '../../modelos/vacante.model';
+import { CandidatoModule } from '../../modelos/candidato.model';
+import { MostrarCandidatosService } from '../../servicios/mostrar-candidatos.service';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-mostrar-cantidatos',
@@ -7,9 +9,19 @@ import { VacanteModule } from '../../modelos/vacante.model';
   styleUrls: ['./mostrar-cantidatos.component.css'],
 })
 export class MostrarCantidatosComponent implements OnInit {
-  @Input() canditado?: VacanteModule;
 
-  constructor() {}
+  constructor(private mostrar: MostrarCandidatosService,  private cdRef: ChangeDetectorRef) {}
 
-  ngOnInit(): void {}
+  candidatos: CandidatoModule[] = [];
+
+  ngOnInit(): void {
+    console.log('candidato: ' , this.candidatos);
+    this.cdRef.detectChanges();
+  }
+
+  mostrarCandidato(id: string){
+    this.mostrar.mostrarCandidatos(id).subscribe((resp) => {
+      this.candidatos = resp;
+    });
+  }
 }

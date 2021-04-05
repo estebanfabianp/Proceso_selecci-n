@@ -1,6 +1,7 @@
 import { EntrevistaModule } from './entrevista.model';
 
 export class CandidatoModule {
+  id_candidato: string = "";
   nombre_candidato: string = "";
   apellido_candidato: string = "";
   correo_candidato: string = "";

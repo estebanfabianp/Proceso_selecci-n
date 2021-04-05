@@ -21,7 +21,6 @@
       <tbody>
         <tr
           *ngFor="let vacante of vacantes; let i = index"
-          [class.selecVacantes]="vacante === selecVacantes"
           (click)="onSelect(vacante)"
         >
           <th scope="row">{{ i + 1 }}</th>
@@ -41,8 +40,7 @@
     </table>
   </div>
   <div>
-    <app-mostrar-cantidatos
-      [canditado]="selecVacantes"
-    ></app-mostrar-cantidatos>
+    <app-mostrar-cantidatos></app-mostrar-cantidatos>
   </div>
 </div>
+

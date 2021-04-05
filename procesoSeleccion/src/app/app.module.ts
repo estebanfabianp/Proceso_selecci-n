@@ -37,7 +37,7 @@ import { MostrarCantidatosComponent } from './componentes/mostrar-cantidatos/mos
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MostrarCantidatosComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

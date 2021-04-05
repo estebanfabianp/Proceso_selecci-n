@@ -26,7 +26,6 @@ export class MostrarVacantesService {
           id_vancate: key
         }
     });
-    console.log(vacante);
     return vacante;
   }
 }

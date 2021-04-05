@@ -1,4 +1,28 @@
-<app-menu></app-menu>
-<div *ngIf="canditado">
-  <div><span>prueba: </span>{{ canditado.id_vancate }}</div>
+<div class="text-center">
+  <section id="top" class="one facyt">
+    <div class="container">
+      <header>
+        <h2>Vacantes</h2>
+      </header>
+    </div>
+  </section>
+  <div>
+    <table id="dataTable" class="table table-bordered table-stripped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Vacante</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidato of candidatos; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>PRUEBA</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
