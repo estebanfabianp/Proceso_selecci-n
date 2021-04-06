@@ -28,12 +28,12 @@
         <td>
           <article class="form-row">
             <section class="btn-group col-sm-12 col-md-3">
-              <button class="btn btn-primary">
+              <button class="btn btn-primary" [routerLink]="['/crearEntrevista', candidato.id_candidato,candidato.id_vacante ]">
                 <i class="fas fa-cloud">Agregar</i>
               </button>
             </section>
             <section class="btn-group col-sm-12 col-md-3">
-              <button class="btn btn-primary">
+              <button class="btn btn-primary" [routerLink]="['/entrevista' , candidato.id_candidato,candidato.id_vacante]">
                 <i class="fas fa-cloud">Detalle</i>
               </button>
             </section>

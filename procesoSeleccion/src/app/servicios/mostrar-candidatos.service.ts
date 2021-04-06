@@ -11,23 +11,23 @@ export class MostrarCandidatosService {
   private url = 'https://procesoseleccion-724a7-default-rtdb.firebaseio.com';
 
   mostrarCandidatos(id: string) {
-    return this.http.get(`${this.url}/vacante/${id}/candidato.json`)
-    .pipe(
-      map(resp => this.CrearArreglo(resp))
-    );
+    return this.http
+      .get(`${this.url}/vacante/${id}/candidato.json`)
+      .pipe(map((resp) => this.CrearArreglo(resp, id)));
   }
 
-  private CrearArreglo(candidatoObj: any) {
-    if (candidatoObj != null){
-    const candidato = Object.keys(candidatoObj).map((key) => {
-      return {
-        ...candidatoObj[key],
-        id_candidato: key,
-      };
-    });
-  
-    return candidato;
+  private CrearArreglo(candidatoObj: any, id: string) {
+    if (candidatoObj != null) {
+      const candidato = Object.keys(candidatoObj).map((key) => {
+        return {
+          ...candidatoObj[key],
+          id_candidato: key,
+          id_vacante: id,
+        };
+      });
+
+      return candidato;
+    }
+    return candidatoObj;
   }
-  return candidatoObj;
-}
 }

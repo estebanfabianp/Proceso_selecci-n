@@ -1,0 +1,29 @@
+<app-menu></app-menu>
+<form #formCrear="ngForm" (ngSubmit)="crearEntrevista(formCrear)" class="form-horizontal" style="margin-top: auto">
+  <section class="container my-5 position-relative">
+    <h1>Entrevista</h1>
+    <article class="form-row">
+      <section class="form-group col-sm-12 col-md-2">
+        <label for="exampleFormControlInput1 ">Fecha</label>
+        <input type="date" class="form-control" id="v_fecha" name="v_fecha" [(ngModel)]="entrevista.fecha_entrevista" />
+      </section>
+    </article>
+    <section class="form-group">
+      <label for="exampleFormControlTextarea1" class="col-lg-1">Observación</label>
+      <textarea class="form-control" id="v_observa" name="v_observa" [(ngModel)]="entrevista.observacion_entrevista"
+        rows="3"></textarea>
+    </section>
+    <article class="btn-toolbar" role="toolbar">
+      <section class="btn-group col-sm-12 col-md-2">
+        <button type="submit" class="btn btn-primary" id="b_vguardar">
+          Guardar
+        </button>
+      </section>
+      <section class="btn-group col-sm-12 col-md-2">
+        <button type="reset" class="btn btn-primary" id="b_cancelar">
+          Cancelar
+        </button>
+      </section>
+    </article>
+  </section>
+</form>

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { CandidatoModule } from '../../modelos/candidato.model';
 import { CrearCandidatoService } from '../../servicios/crear-candidato.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-candidato',

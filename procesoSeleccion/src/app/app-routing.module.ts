@@ -7,15 +7,15 @@ import { IngresoComponent } from './componentes/ingreso/ingreso.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { MostrarVacantesComponent } from './componentes/mostrar-vacantes/mostrar-vacantes.component';
 import { MostrarCantidatosComponent } from './componentes/mostrar-cantidatos/mostrar-cantidatos.component';
-import { PrincipalComponent } from './paginas/principal/principal.component';
+import { CrearEntrevistaComponent } from './componentes/crear-entrevista/crear-entrevista.component';
 const routes: Routes = [
   { path: 'candidato/:parametro', component: CrearCandidatoComponent },
   { path: 'vacante', component: CrearVacanteComponent },
-  { path: 'entrevista', component: Entrevista1Component },
+  { path: 'entrevista/:parametro/:parametro2', component: Entrevista1Component },
   { path: 'ingreso', component: IngresoComponent },
   { path: 'usuario', component: UsuarioComponent },
-  { path: 'principal', component: PrincipalComponent },
   { path: 'mostrarVacantes', component: MostrarVacantesComponent },
+  { path: 'crearEntrevista/:parametro/:parametro2', component:  CrearEntrevistaComponent},
   { path: 'mostrarCandidatos/:parametro', component: MostrarCantidatosComponent },
   { path: '**', redirectTo: 'ingreso' },
 ];

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CandidatoModule } from '../../modelos/candidato.model';
 import { MostrarCandidatosService } from '../../servicios/mostrar-candidatos.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mostrar-cantidatos',
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MostrarCantidatosComponent implements OnInit {
 
-  constructor(private mostrar: MostrarCandidatosService, private router: ActivatedRoute) {}
+  constructor(private mostrar: MostrarCandidatosService, private router: ActivatedRoute, private routerr: Router) {}
   id: any;
   candidatos: CandidatoModule[] = [];
 
@@ -18,7 +19,10 @@ export class MostrarCantidatosComponent implements OnInit {
     this.id = this.router.snapshot.paramMap.get('parametro');
     this.mostrar.mostrarCandidatos(this.id).subscribe((resp) => {
       this.candidatos = resp;
-      console.log(this.candidatos);
+      if (resp == null){
+          alert('Esta vacante no tiene candidatos asociados');
+          this.routerr.navigateByUrl('/mostrarVacantes');
+      }
     });
   }
 }
