@@ -1,41 +1,45 @@
 <app-menu></app-menu>
-<div class="text-center">
-  <section id="top" class="one facyt">
-    <div class="container">
-      <header>
-        <h2>Candidatos</h2>
-      </header>
-    </div>
-  </section>
-  <div>
-    <table id="dataTable" class="table table-bordered table-stripped">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Fecha</th>
-          <th>Estado</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let candidato of candidatos; let i = index">
-          <th scope="row">{{ i + 1 }}</th>
-          <td>{{ candidato.nombre_candidato }}</td>
-          <td>{{ candidato.apellido_candidato }}</td>
-          <td>{{ candidato.fecha_ingreso_candidato }}</td>
-          <td>{{ candidato.estado_candidato }}</td>
-          <td>
-            <button class="btn btn-info" >
-              <i class="fas fa-cloud">Agregar</i>
-            </button>
-            <button class="btn btn-info">
-              <i class="fas fa-cloud">Detalle</i>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+<section id="top" class="one facyt">
+  <div class="container">
+    <header>
+      <h2 class="text-center titulo_index">Candidatos</h2>
+    </header>
   </div>
-</div>
+</section>
+<section class="container">
+  <table id="dataTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidato of candidatos; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ candidato.nombre_candidato }}</td>
+        <td>{{ candidato.apellido_candidato }}</td>
+        <td>{{ candidato.fecha_ingreso_candidato }}</td>
+        <td>{{ candidato.estado_candidato }}</td>
+        <td>
+          <article class="form-row">
+            <section class="btn-group col-sm-12 col-md-3">
+              <button class="btn btn-primary">
+                <i class="fas fa-cloud">Agregar</i>
+              </button>
+            </section>
+            <section class="btn-group col-sm-12 col-md-3">
+              <button class="btn btn-primary">
+                <i class="fas fa-cloud">Detalle</i>
+              </button>
+            </section>
+          </article>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

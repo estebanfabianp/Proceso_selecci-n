@@ -1,39 +1,49 @@
 <app-menu></app-menu>
-<div class="text-center">
-  <section id="top" class="one facyt">
-    <div class="container">
-      <header>
-        <h2>Vacantes</h2>
-      </header>
-    </div>
-  </section>
-  <div>
-    <table id="dataTable" class="table table-bordered table-stripped">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Vacante</th>
-          <th>Fecha</th>
-          <th>Estado</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let vacante of vacantes; let i = index">
-          <th scope="row">{{ i + 1 }}</th>
-          <td>{{ vacante.cargo_solicitado }}</td>
-          <td>{{ vacante.fecha_solicitud }}</td>
-          <td>{{ vacante.estado_solicitud }}</td>
-          <td>
-            <button class="btn btn-info" [routerLink]="['/candidato', vacante.id_vancate]">
-              <i class="fas fa-cloud">Agregar</i>
-            </button>
-            <button class="btn btn-info" [routerLink]="['/mostrarCandidatos', vacante.id_vancate]">
-              <i class="fas fa-cloud">Detalle</i>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+<section id="top" class="one facyt">
+  <div class="container">
+    <header>
+      <h2 class="text-center titulo_index">Vacantes</h2>
+    </header>
   </div>
-</div>
+</section>
+<section class="container">
+  <table id="dataTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Vacante</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vacante of vacantes; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ vacante.cargo_solicitado }}</td>
+        <td>{{ vacante.fecha_solicitud }}</td>
+        <td>{{ vacante.estado_solicitud }}</td>
+        <td>
+          <article class="form-row">
+            <section class="btn-group col-sm-12 col-md-3">
+              <button
+                class="btn btn-primary"
+                [routerLink]="['/candidato', vacante.id_vancate]"
+              >
+                <i class="fas fa-cloud">Agregar</i>
+              </button>
+            </section>
+            <section class="btn-group col-sm-12 col-md-3">
+              <button
+                class="btn btn-primary"
+                [routerLink]="['/mostrarCandidatos', vacante.id_vancate]"
+              >
+                <i class="fas fa-cloud">Detalle</i>
+              </button>
+            </section>
+          </article>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
