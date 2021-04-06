@@ -9,5 +9,6 @@ export class CandidatoModule {
   fecha_ingreso_candidato: string = "";
   observacion_candidato: string = "";
   estado_candidato: string = "";
+  cedula_candidato: string = "";
   entrevista: EntrevistaModule[] = [];
  }

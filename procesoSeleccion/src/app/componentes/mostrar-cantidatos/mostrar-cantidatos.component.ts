@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CandidatoModule } from '../../modelos/candidato.model';
 import { MostrarCandidatosService } from '../../servicios/mostrar-candidatos.service';
-import { ChangeDetectorRef } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-mostrar-cantidatos',
@@ -10,18 +10,15 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class MostrarCantidatosComponent implements OnInit {
 
-  constructor(private mostrar: MostrarCandidatosService,  private cdRef: ChangeDetectorRef) {}
-
+  constructor(private mostrar: MostrarCandidatosService, private router: ActivatedRoute) {}
+  id: any;
   candidatos: CandidatoModule[] = [];
 
   ngOnInit(): void {
-    console.log('candidato: ' , this.candidatos);
-    this.cdRef.detectChanges();
-  }
-
-  mostrarCandidato(id: string){
-    this.mostrar.mostrarCandidatos(id).subscribe((resp) => {
+    this.id = this.router.snapshot.paramMap.get('parametro');
+    this.mostrar.mostrarCandidatos(this.id).subscribe((resp) => {
       this.candidatos = resp;
+      console.log(this.candidatos);
     });
   }
 }

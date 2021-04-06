@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VacanteModule } from '../../modelos/vacante.model';
-import { Router } from '@angular/router';
 import { MostrarVacantesService } from '../../servicios/mostrar-vacantes.service';
-import { MostrarCantidatosComponent } from '../mostrar-cantidatos/mostrar-cantidatos.component';
 
 @Component({
   selector: 'app-mostrar-vacantes',
@@ -12,8 +10,6 @@ import { MostrarCantidatosComponent } from '../mostrar-cantidatos/mostrar-cantid
 export class MostrarVacantesComponent implements OnInit {
   constructor(
     private mostrar: MostrarVacantesService,
-    private router: Router,
-    private candidato: MostrarCantidatosComponent
   ) {}
 
   vacantes: VacanteModule[] = [];
@@ -22,13 +18,6 @@ export class MostrarVacantesComponent implements OnInit {
   ngOnInit() {
     this.mostrar.mostrarVacantes().subscribe((resp) => {
       this.vacantes = resp;
-      console.log('vacantes: ' + this.vacantes);
     });
-  }
-  
-  onSelect(vacantes: VacanteModule) {
-    this.selecVacantes = vacantes;
-    this.candidato.mostrarCandidato(this.selecVacantes.id_vancate);
-    this.candidato.ngOnInit();
   }
 }

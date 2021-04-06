@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { CandidatoModule } from '../../modelos/candidato.model';
 import { CrearCandidatoService } from '../../servicios/crear-candidato.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-candidato',
@@ -14,7 +15,8 @@ export class CrearCandidatoComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: ActivatedRoute,
-    private crear: CrearCandidatoService
+    private crear: CrearCandidatoService,
+    private routerr: Router
   ) {}
 
   candidato: CandidatoModule = new CandidatoModule();
@@ -31,6 +33,7 @@ export class CrearCandidatoComponent implements OnInit {
       this.crear.crearCandidatos(this.candidato, this.id).subscribe(
         (res) => {
           alert('Registro exitoso');
+          this.routerr.navigateByUrl('/mostrarCandidatos');
         },
         (err) => {
           alert(err.error.error.message);

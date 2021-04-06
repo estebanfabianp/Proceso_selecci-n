@@ -6,6 +6,7 @@ import { Entrevista1Component } from './componentes/entrevista1/entrevista1.comp
 import { IngresoComponent } from './componentes/ingreso/ingreso.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { MostrarVacantesComponent } from './componentes/mostrar-vacantes/mostrar-vacantes.component';
+import { MostrarCantidatosComponent } from './componentes/mostrar-cantidatos/mostrar-cantidatos.component';
 import { PrincipalComponent } from './paginas/principal/principal.component';
 const routes: Routes = [
   { path: 'candidato/:parametro', component: CrearCandidatoComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'usuario', component: UsuarioComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'mostrarVacantes', component: MostrarVacantesComponent },
+  { path: 'mostrarCandidatos/:parametro', component: MostrarCantidatosComponent },
   { path: '**', redirectTo: 'ingreso' },
 ];
 
