@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: 'entrevista', component: Entrevista1Component },
   { path: 'ingreso', component: IngresoComponent },
   { path: 'usuario', component: UsuarioComponent },
-  { path: 'usuario', component: UsuarioComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'mostrarVacantes', component: MostrarVacantesComponent },
   { path: 'mostrarCandidatos/:parametro', component: MostrarCantidatosComponent },
