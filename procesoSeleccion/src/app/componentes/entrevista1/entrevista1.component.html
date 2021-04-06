@@ -1,2 +1,52 @@
 <app-menu></app-menu>
-<p>entrevista1 works!</p>
+<div class="text-center">
+  <section id="top" class="one facyt">
+    <div class="container">
+      <header>
+        <h2>entrevista</h2>
+      </header>
+    </div>
+  </section>
+  <div>
+    <table id="dataTable" class="table table-striped">
+      <thead>
+        <tr>
+          <th>nombre</th>
+          <th>fecha</th>
+          <th>Vacante</th>
+          <th>entrevista</th>
+          <th>observaciones</th>
+          <th>contratado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let vacante of vacantes; let i = index"
+          [class.selecVacantes]="vacante === selecVacantes"
+          (click)="onSelect(vacante)"
+        >
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{  }}</td>
+          <td>{{  }}</td>
+          <td>{{  }}</td>
+          <td>{{  }}</td>
+          <td>{{  }}</td>
+          <td>{{  }}</td>
+          <td>
+            <button
+              class="btn btn-info"
+              [routerLink]="['/candidato', vacante.id_vancate]"
+            >
+              <i class="fas fa-cloud">Agregar</i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <app-mostrar-cantidatos
+      [canditado]=""
+    ></app-mostrar-cantidatos>
+  </div>
+</div>
