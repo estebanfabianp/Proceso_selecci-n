@@ -1,46 +1,21 @@
 <app-menu></app-menu>
-<form
-  #formCrear="ngForm"
-  (ngSubmit)="crearVacante(formCrear)"
-  class="form-horizontal"
-  style="margin-top: auto"
->
+<form #formCrear="ngForm" (ngSubmit)="crearVacante(formCrear)" class="form-horizontal" style="margin-top: auto">
   <section class="container my-5 position-relative">
     <h1>Vacante</h1>
     <article class="form-row">
       <section class="form-group col-sm-12 col-md-2">
         <label for="exampleFormControlInput1 ">Fecha Solicitud</label>
-        <input
-          type="date"
-          class="form-control"
-          id="v_fecha"
-          name="v_fecha"
-          [(ngModel)]="vacante.fecha_solicitud"
-        />
+        <input type="date" class="form-control" id="v_fecha" name="v_fecha" [(ngModel)]="vacante.fecha_solicitud" />
       </section>
       <section class="form-group col-sm-12 col-md-6">
-        <label for="exampleFormControlInput1" class="col-lg-1"
-          >Solicitante</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="v_solicitante"
-          name="v_solicitante"
-          placeholder="Juan Perez"
-          [(ngModel)]="vacante.solicitante"
-        />
+        <label for="exampleFormControlInput1" class="col-lg-1">Solicitante</label>
+        <input type="text" class="form-control" id="v_solicitante" name="v_solicitante" placeholder="Juan Perez"
+          [(ngModel)]="vacante.solicitante" />
       </section>
       <section class="form-group col-sm-12 col-md-4">
         <label for="exampleFormControlInput1" class="col-lg-1">Cargo</label>
-        <input
-          type="text"
-          class="form-control"
-          id="v_cargo"
-          name="v_cargo"
-          placeholder="Gerente de proyecto"
-          [(ngModel)]="vacante.cargo_solicitado"
-        />
+        <input type="text" class="form-control" id="v_cargo" name="v_cargo" placeholder="Gerente de proyecto"
+          [(ngModel)]="vacante.cargo_solicitado" />
       </section>
     </article>
     <article class="form-row">
@@ -48,60 +23,32 @@
         <label for="exampleFormControlInput1">Estado</label>
         <article class="form-row">
           <section class="radio col-sm-12 col-md-6">
-            <input
-              type="radio"
-              id="defaultUnchecked"
-              name="defaultExampleRadios"
-              [(ngModel)]="vacante.estado_solicitud"
-            />
+            <input type="radio" id="defaultUnchecked" name="defaultExampleRadios"
+              [(ngModel)]="vacante.estado_solicitud" />
             <label for="defaultUnchecked">Abierto</label>
           </section>
 
           <section class="radio">
-            <input
-              type="radio"
-              id="defaultChecked"
-              name="defaultExampleRadios"
-              checked
-            />
+            <input type="radio" id="defaultChecked" name="defaultExampleRadios" checked />
             <label for="defaultChecked">Cerrado</label>
           </section>
         </article>
       </section>
       <section class="form-group col-5">
         <label for="exampleFormControlInput1" class="col-lg-1">Cantidad</label>
-        <input
-          type="number"
-          class="form-control"
-          id="v_cantidad"
-          name="v_cantidad"
-          placeholder="1"
-          [(ngModel)]="vacante.cantidad_vacante"
-        />
+        <input type="number" class="form-control" id="v_cantidad" name="v_cantidad" placeholder="1"
+          [(ngModel)]="vacante.cantidad_vacante" />
       </section>
       <section class="form-group col-4">
         <label for="exampleFormControlInput1" class="col-lg-1">Teléfono</label>
-        <input
-          type="number"
-          class="form-control"
-          id="v_telefono"
-          name="v_telefono"
-          placeholder="321235385"
-          [(ngModel)]="vacante.telefono_solicitante"
-        />
+        <input type="number" class="form-control" id="v_telefono" name="v_telefono" placeholder="321235385"
+          [(ngModel)]="vacante.telefono_solicitante" />
       </section>
     </article>
     <section class="form-group">
-      <label for="exampleFormControlTextarea1" class="col-lg-1"
-        >Observación</label
-      >
-      <textarea
-        class="form-control"
-        id="v_observa"
-        name="v_observa"
-        [(ngModel)]="vacante.observacion_solicitud"
-        rows="3"
-      ></textarea>
+      <label for="exampleFormControlTextarea1" class="col-lg-1">Observación</label>
+      <textarea class="form-control" id="v_observa" name="v_observa" [(ngModel)]="vacante.observacion_solicitud"
+        rows="3"></textarea>
     </section>
     <article class="btn-toolbar" role="toolbar">
       <section class="btn-group col-sm-12 col-md-2">

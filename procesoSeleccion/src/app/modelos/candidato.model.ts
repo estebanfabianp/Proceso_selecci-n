@@ -11,4 +11,5 @@ export class CandidatoModule {
   estado_candidato: string = "";
   cedula_candidato: string = "";
   entrevista: EntrevistaModule[] = [];
+  id_vacante: string = "";
  }
