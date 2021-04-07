@@ -37,4 +37,8 @@ export class IngresarService {
       this.usuarioToken = idToken;
       localStorage.setItem('token', this.usuarioToken);
     }
+
+    // logout(): Promise<any> {
+    //   return this.fireAuth.signOut(); --> para realizar el cierre de la secion
+    // }
 }

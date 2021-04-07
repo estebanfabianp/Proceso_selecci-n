@@ -1,10 +1,5 @@
 <app-menu></app-menu>
-<form
-  #formCrear="ngForm"
-  (ngSubmit)="crearVacante(formCrear)"
-  class="form-horizontal"
-  style="margin-top: auto"
->
+<form class="form-horizontal" style="margin-top: auto">
   <section class="container my-5 position-relative">
     <h1>Vacante</h1>
     <article class="form-row">
@@ -16,7 +11,6 @@
           id="v_fecha"
           name="v_fecha"
           placeholder="Numero de cedula"
-          [(ngModel)]="vacante.fecha_solicitud"
         />
       </section>
       <section class="form-group col-sm-12 col-md-4">
@@ -27,7 +21,6 @@
           id="v_cargo"
           name="v_cargo"
           placeholder="Gerente de proyecto"
-          [(ngModel)]="vacante.cargo_solicitado"
         />
       </section>
       <section class="form-group col-sm-12 col-md-6">
@@ -38,28 +31,22 @@
           id="v_solicitante"
           name="v_solicitante"
           placeholder="Correo"
-          [(ngModel)]="vacante.solicitante"
         />
       </section>
     </article>
     <article class="form-row">
       <section class="form-group col-sm-12 col-md-4">
-        <label for="exampleFormControlInput1" class="col-lg-1"
-          >contraseña</label
-        >
+        <label for="exampleFormControlInput1" class="col-lg-1">Clave</label>
         <input
           type="password"
           class="form-control"
           id="v_cargo"
           name="v_cargo"
           placeholder="Gerente de proyecto"
-          [(ngModel)]="vacante.cargo_solicitado"
         />
       </section>
       <section class="form-group col-sm-12 col-md-4">
-        <label for="exampleFormControlInput1" class="col-lg-1"
-          >contraseña</label
-        >
+        <label for="exampleFormControlInput1" class="col-lg-1">Perfil</label>
         <select class="form-control form-control-lg">
           <option>Administrador</option>
           <option>usuario</option>

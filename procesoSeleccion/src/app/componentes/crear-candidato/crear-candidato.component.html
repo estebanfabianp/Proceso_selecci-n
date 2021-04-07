@@ -1,58 +1,126 @@
 <app-menu></app-menu>
-<form #formCrear="ngForm" (ngSubmit)="crearCantidato(formCrear)" class="form-horizontal" style="margin-top: auto">
-  <a class="navbar-brand" href="#">
-    <img class="img-fluid" src="assets\Iconos\ITC.png" alt="logo" />
-  </a>
-  <section class="container my-5 position-relative">
+<form
+  #formCrear="ngForm"
+  (ngSubmit)="crearCantidato(formCrear)"
+  class="form-horizontal"
+  style="margin-top: auto"
+>
+  <section class="container">
     <h1>Candidato</h1>
-    <section class="form-group">
-      <label for="exampleFormControlInput1" class="col-lg-1">Cédula </label>
-      <input type="number" id="c_Cedula" class="form-control" placeholder="Cédula" name="c_Cedula" [(ngModel)]="candidato.cedula_candidato"/>
-    </section>
-    <section class="form-group">
-      <label for="formGroupExampleInput1" class="col-lg-1">Nombres</label>
-      <input type="text" id="c_nombres" class="form-control" placeholder="Nombres" name="c_nombres" [(ngModel)]="candidato.nombre_candidato"/>
-    </section>
-    <section class="form-group">
-      <label for="exampleFormControlInput1" class="col-lg-1">Apellidos</label>
-      <input type="text" id="c_apellidos" class="form-control" placeholder="Apellidos" name="c_apellidos" [(ngModel)]="candidato.apellido_candidato"/>
-    </section>
-    <section class="form-group">
-      <label for="exampleFormControlInput1" class="col-lg-1">Estado</label>
-      <section class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="c_estado1" />
-        <label class="form-check-label col-lg-2" for="defaultCheck2">
-          Abierto
-        </label>
-        <input class="form-check-input" type="checkbox" value="" id="c_estado2" />
-        <label class="form-check-label col-lg-2" for="defaultCheck2">
-          Cerrado
-        </label>
+    <article class="form-row">
+      <section class="form-group col-sm-12 col-md-4">
+        <label for="exampleFormControlInput1">Cédula </label>
+        <input
+          type="number"
+          id="c_Cedula"
+          class="form-control"
+          placeholder="Cédula"
+          name="c_Cedula"
+          [(ngModel)]="candidato.cedula_candidato"
+        />
       </section>
-    </section>
+      <section class="form-group col-sm-12 col-md-4">
+        <label for="formGroupExampleInput1">Nombres</label>
+        <input
+          type="text"
+          id="c_nombres"
+          class="form-control"
+          placeholder="Nombres"
+          name="c_nombres"
+          [(ngModel)]="candidato.nombre_candidato"
+        />
+      </section>
+      <section class="form-group col-sm-12 col-md-4">
+        <label for="exampleFormControlInput1">Apellidos</label>
+        <input
+          type="text"
+          id="c_apellidos"
+          class="form-control"
+          placeholder="Apellidos"
+          name="c_apellidos"
+          [(ngModel)]="candidato.apellido_candidato"
+        />
+      </section>
+    </article>
+
+    <article class="form-row">
+      <section class="form-group col-3">
+        <label for="exampleFormControlInput1">Estado</label>
+        <article class="form-row">
+          <section class="radio col-sm-12 col-md-6">
+            <input
+              class="form-check-input"
+              type="radio"
+              value=""
+              id="c_estado1"
+            />
+            <label class="form-check-label" for="defaultCheck2">
+              Abierto
+            </label>
+          </section>
+          <section class="radio col-sm-12 col-md-6">
+            <input
+              class="form-check-input"
+              type="radio"
+              value=""
+              id="c_estado2"
+            />
+            <label class="form-check-label" for="defaultCheck2">
+              Cerrado
+            </label>
+          </section>
+        </article>
+      </section>
+      <section class="form-group col-sm-12 col-md-4">
+        <label for="exampleFormControlInput1">Correo</label>
+        <input
+          type="email"
+          class="form-control"
+          id="c_correo"
+          placeholder="nombre@ejemplo.com"
+          name="c_correo"
+          [(ngModel)]="candidato.correo_candidato"
+        />
+      </section>
+      <section class="form-group col-sm-12 col-md-3">
+        <label for="exampleFormControlInput1">Teléfono</label>
+        <input
+          type="number"
+          class="form-control"
+          id="c_telefono"
+          placeholder="321235385"
+          name="c_telefono"
+          [(ngModel)]="candidato.telefono_candidato"
+        />
+      </section>
+      <section class="form-group col-sm-12 col-md-2">
+        <label for="exampleFormControlInput1">Fecha Ingreso</label>
+        <input
+          type="date"
+          class="form-control"
+          id="c_fecha"
+          name="c_fecha"
+          [(ngModel)]="candidato.fecha_ingreso_candidato"
+        />
+      </section>
+    </article>
     <section class="form-group">
-      <label for="exampleFormControlInput1" class="col-lg-1">Correo</label>
-      <input type="email" class="form-control" id="c_correo" placeholder="nombre@ejemplo.com" name="c_correo" [(ngModel)]="candidato.correo_candidato"/>
-    </section>
-    <section class="form-group">
-      <label for="exampleFormControlInput1" class="col-lg-1">Teléfono</label>
-      <input type="number" class="form-control" id="c_telefono" placeholder="321235385" name="c_telefono"[(ngModel)]="candidato.telefono_candidato" />
-    </section>
-    <section class="form-group">
-      <label for="exampleFormControlInput1">Fecha Ingreso</label>
-      <input type="date" class="form-control" id="c_fecha" name="c_fecha" [(ngModel)]="candidato.fecha_ingreso_candidato" />
-    </section>
-    <section class="form-group">
-      <label for="exampleFormControlTextarea1" class="col-lg-1">Observación</label>
-      <textarea class="form-control" id="c_observa" rows="3" name="c_observa" [(ngModel)]="candidato.observacion_candidato"></textarea>
+      <label for="exampleFormControlTextarea1">Observación</label>
+      <textarea
+        class="form-control"
+        id="c_observa"
+        rows="3"
+        name="c_observa"
+        [(ngModel)]="candidato.observacion_candidato"
+      ></textarea>
     </section>
     <section class="btn-toolbar" role="toolbar">
-      <section class="btn-group col-lg-1">
+      <section class="btn-groupcol-sm-12 col-md-2">
         <button type="submit" class="btn btn-primary" id="b_guardar">
           Guardar
         </button>
       </section>
-      <section class="btn-group col-lg-1">
+      <section class="btn-group col-sm-12 col-md-2">
         <button type="reset" class="btn btn-primary" id="b_cancelar">
           Cancelar
         </button>
